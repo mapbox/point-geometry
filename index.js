@@ -11,6 +11,8 @@ module.exports = Point;
  * pixels, or any other sort of unit.
  * @param {Number} y the y-coordinate. this could be latitude or screen
  * pixels, or any other sort of unit.
+ * @example
+ * var point = new Point(-77, 38);
  */
 function Point(x, y) {
     this.x = x;
@@ -246,6 +248,11 @@ Point.prototype = {
  * is already a Point, or an unknown type, return it unchanged
  * @param {Array<Number>|Point|*} a any kind of input value
  * @return {Point} constructed point, or passed-through value.
+ * @example
+ * // this
+ * var point = Point.convert([0, 1]);
+ * // is equivalent to
+ * var point = new Point(0, 1);
  */
 Point.convert = function (a) {
     if (a instanceof Point) {

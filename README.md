@@ -19,6 +19,12 @@ modification methods.
 | `y`       | Number | the y-coordinate. this could be latitude or screen pixels, or any other sort of unit.  |
 
 
+### Example
+
+```js
+var point = new Point(-77, 38);
+```
+
 
 ### `clone`
 
@@ -279,6 +285,15 @@ is already a Point, or an unknown type, return it unchanged
 | --------- | ------------------------ | ----------------------- |
 | `a`       | Array\.\<Number\>\,Point | any kind of input value |
 
+
+### Example
+
+```js
+// this
+var point = Point.convert([0, 1]);
+// is equivalent to
+var point = new Point(0, 1);
+```
 
 
 **Returns** `Point`, constructed point, or passed-through value.
