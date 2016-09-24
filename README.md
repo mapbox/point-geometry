@@ -99,17 +99,17 @@ yielding a new point.
 **Returns** `Point`, output point
 
 
-### `rotate(a)`
+### `rotate(a, p)`
 
-Rotate this point around the 0, 0 origin by an angle a,
+Rotate this point around p point by an angle a,
 given in radians
 
 ### Parameters
 
-| parameter | type   | description                        |
-| --------- | ------ | ---------------------------------- |
-| `a`       | Number | angle to rotate around, in radians |
-
+| parameter | type   | description                                        |
+| --------- | ------ | -------------------------------------------------- |
+| `a`       | Number | angle to rotate around, in radians                 |
+| `p`       | Point  | Point to rotate around, if not defined, set to 0,0 |
 
 
 **Returns** `Point`, output point
