@@ -64,10 +64,18 @@ Point.prototype = {
      * Rotate this point around the 0, 0 origin by an angle a,
      * given in radians
      * @param {Number} a angle to rotate around, in radians
-     * @param {Point} p Point to rotate around, if not defined, set to 0,0
      * @return {Point} output point
      */
-    rotate:  function(a,p) { return this.clone()._rotate(a,p); },
+    rotate:  function(a) { return this.clone()._rotate(a); },
+
+    /**
+     * Rotate this point around p point by an angle a,
+     * given in radians
+     * @param {Number} a angle to rotate around, in radians
+     * @param {Point} p Point to rotate around
+     * @return {Point} output point
+     */
+    rotateAround:  function(a,p) { return this.clone()._rotateAround(a,p); },
 
     /**
      * Multiply this point by a 4x1 transformation matrix
@@ -227,10 +235,17 @@ Point.prototype = {
         return this;
     },
 
-    _rotate: function(angle, p) {
-        if (!p) {
-          p = {x: 0, y: 0};
-        }
+    _rotate: function(angle) {
+        var cos = Math.cos(angle),
+            sin = Math.sin(angle),
+            x = cos * this.x - sin * this.y,
+            y = sin * this.x + cos * this.y;
+        this.x = x;
+        this.y = y;
+        return this;
+    },
+
+    _rotateAround: function(angle, p) {
         var cos = Math.cos(angle),
             sin = Math.sin(angle),
             x = p.x + cos * (this.x - p.x) - sin * (this.y - p.y),
