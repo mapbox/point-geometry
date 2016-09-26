@@ -212,8 +212,8 @@ Point.prototype = {
     },
 
     _mult: function(k) {
-        this.x *= k;
-        this.y *= k;
+        this.x *= k.x;
+        this.y *= k.y;
         return this;
     },
 
