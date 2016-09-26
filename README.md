@@ -115,6 +115,23 @@ given in radians
 **Returns** `Point`, output point
 
 
+### `rotateAround(a, p)`
+
+Rotate this point around p point by an angle a,
+given in radians
+
+### Parameters
+
+| parameter | type   | description                        |
+| --------- | ------ | ---------------------------------- |
+| `a`       | Number | angle to rotate around, in radians |
+| `p`       | Point  | Point to rotate around             |
+
+
+
+**Returns** `Point`, output point
+
+
 ### `matMult(m)`
 
 Multiply this point by a 4x1 transformation matrix
