@@ -54,6 +54,11 @@ test('Point', function(t) {
             t.deepEquals((new Point(0, 1).rotate(Math.PI)).round(), new Point(0, -1));
             t.end();
         });
+        t.test('#rotateAround', function(t) {
+            t.deepEquals((new Point(2, 3).rotateAround(Math.PI/2, new Point(2,2))).round(), new Point(1, 2));
+            t.deepEquals((new Point(2, 3).rotateAround(Math.PI, new Point(2,2))).round(), new Point(2, 1));
+            t.end();
+        });
         t.test('#round', function(t) {
             t.equals((new Point(0, 0).round()).equals(new Point(0, 0)), true);
             t.equals((new Point(0, 0.5).round()).equals(new Point(0, 1)), true);
