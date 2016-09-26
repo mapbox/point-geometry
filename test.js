@@ -37,15 +37,15 @@ test('Point', function(t) {
             t.end();
         });
         t.test('#mult', function(t) {
-            t.equals((new Point(0, 0).mult(5)).equals(new Point(0, 0)), true);
-            t.equals((new Point(0, 1).mult(5)).equals(new Point(0, 5)), true);
-            t.equals((new Point(1, 1).mult(5)).equals(new Point(5, 5)), true);
+            t.equals((new Point(0, 0).mult(new Point(5,5))).equals(new Point(0, 0)), true);
+            t.equals((new Point(0, 1).mult(new Point(5,5))).equals(new Point(0, 5)), true);
+            t.equals((new Point(1, 1).mult(new Point(5,5))).equals(new Point(5, 5)), true);
             t.end();
         });
         t.test('#div', function(t) {
-            t.equals((new Point(0, 0).div(5)).equals(new Point(0, 0)), true);
-            t.equals((new Point(0, 1).div(5)).equals(new Point(0, 1/5)), true);
-            t.equals((new Point(1, 1).div(5)).equals(new Point(1/5, 1/5)), true);
+            t.equals((new Point(0, 0).div(new Point(5,5))).equals(new Point(0, 0)), true);
+            t.equals((new Point(0, 1).div(new Point(5,5))).equals(new Point(0, 1/5)), true);
+            t.equals((new Point(1, 1).div(new Point(5,5))).equals(new Point(1/5, 1/5)), true);
             t.end();
         });
         t.test('#rotate', function(t) {

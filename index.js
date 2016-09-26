@@ -218,13 +218,14 @@ Point.prototype = {
     },
 
     _div: function(k) {
-        this.x /= k;
-        this.y /= k;
+        this.x /= k.x;
+        this.y /= k.y;
         return this;
     },
 
     _unit: function() {
-        this._div(this.mag());
+        var m = this.mag();
+        this._div(new Point(m,m));
         return this;
     },
 
