@@ -69,14 +69,14 @@ yielding a new point.
 
 ### `mult(k)`
 
-Multiply this point's x & y coordinates with from point,
+Multiply this point's x & y coordinates by fractor,
 yielding a new point.
 
 ### Parameters
 
-| parameter | type  | description     |
-| --------- | ----- | --------------- |
-| `k`       | Point | the other point |
+| parameter | type   | description    |
+| --------- | ------ | -------------- |
+| `k`       | Number | fractor        |
 
 
 
@@ -85,6 +85,38 @@ yielding a new point.
 
 ### `div(k)`
 
+Divide this point's x & y coordinates by divider,
+yielding a new point.
+
+### Parameters
+
+| parameter | type   | description    |
+| --------- | ------ | -------------- |
+| `k`       | Number | divider        |
+
+
+
+**Returns** `Point`, output point
+
+
+### `multByPoint(p)`
+
+Multiply this point's x & y coordinates by point,
+yielding a new point.
+
+### Parameters
+
+| parameter | type  | description     |
+| --------- | ----- | --------------- |
+| `p`       | Point | the other point |
+
+
+
+**Returns** `Point`, output point
+
+
+### `divByPoint(p)`
+
 Divide this point's x & y coordinates with from point,
 yielding a new point.
 
@@ -92,7 +124,7 @@ yielding a new point.
 
 | parameter | type  | description     |
 | --------- | ----- | --------------- |
-| `k`       | Point | the other point |
+| `p`       | Point | the other point |
 
 
 
