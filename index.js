@@ -61,17 +61,17 @@ Point.prototype = {
     divByPoint:     function(p) { return this.clone()._divByPoint(p); },
 
     /**
-     * Multiply this point's x & y coordinates by point,
+     * Multiply this point's x & y coordinates by a factor,
      * yielding a new point.
-     * @param {Point} k the other point
+     * @param {Point} k factor
      * @return {Point} output point
      */
     mult:    function(k) { return this.clone()._mult(k); },
 
     /**
-     * Divide this point's x & y coordinates by point,
+     * Divide this point's x & y coordinates by a factor,
      * yielding a new point.
-     * @param {Point} k the other point
+     * @param {Point} k factor
      * @return {Point} output point
      */
     div:     function(k) { return this.clone()._div(k); },
