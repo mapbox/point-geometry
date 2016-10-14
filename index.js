@@ -45,7 +45,23 @@ Point.prototype = {
     sub:     function(p) { return this.clone()._sub(p); },
 
     /**
-     * Multiply this point's x & y coordinates with from point,
+     * Multiply this point's x & y coordinates by point,
+     * yielding a new point.
+     * @param {Point} p the other point
+     * @return {Point} output point
+     */
+    multByPoint:    function(p) { return this.clone()._multByPoint(p); },
+
+    /**
+     * Divide this point's x & y coordinates by point,
+     * yielding a new point.
+     * @param {Point} p the other point
+     * @return {Point} output point
+     */
+    divByPoint:     function(p) { return this.clone()._divByPoint(p); },
+
+    /**
+     * Multiply this point's x & y coordinates by point,
      * yielding a new point.
      * @param {Point} k the other point
      * @return {Point} output point
@@ -53,7 +69,7 @@ Point.prototype = {
     mult:    function(k) { return this.clone()._mult(k); },
 
     /**
-     * Divide this point's x & y coordinates with from point,
+     * Divide this point's x & y coordinates by point,
      * yielding a new point.
      * @param {Point} k the other point
      * @return {Point} output point
@@ -220,6 +236,18 @@ Point.prototype = {
     _div: function(k) {
         this.x /= k;
         this.y /= k;
+        return this;
+    },
+
+    _multByPoint: function(p) {
+        this.x *= p.x;
+        this.y *= p.y;
+        return this;
+    },
+
+    _divByPoint: function(p) {
+        this.x /= p.x;
+        this.y /= p.y;
         return this;
     },
 

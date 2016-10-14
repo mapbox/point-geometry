@@ -48,6 +48,18 @@ test('Point', function(t) {
             t.equals((new Point(1, 1).div(5)).equals(new Point(1/5, 1/5)), true);
             t.end();
         });
+        t.test('#multByPoint', function(t) {
+            t.equals((new Point(0, 0).multByPoint(new Point(5,5))).equals(new Point(0, 0)), true);
+            t.equals((new Point(0, 1).multByPoint(new Point(5,5))).equals(new Point(0, 5)), true);
+            t.equals((new Point(1, 1).multByPoint(new Point(4,5))).equals(new Point(4, 5)), true);
+            t.end();
+        });
+        t.test('#divByPoint', function(t) {
+            t.equals((new Point(0, 0).divByPoint(new Point(5,5))).equals(new Point(0, 0)), true);
+            t.equals((new Point(0, 1).divByPoint(new Point(5,5))).equals(new Point(0, 1/5)), true);
+            t.equals((new Point(1, 1).divByPoint(new Point(4,5))).equals(new Point(1/4, 1/5)), true);
+            t.end();
+        });
         t.test('#rotate', function(t) {
             t.equals((new Point(0, 0).rotate(0)).equals(new Point(0, 0)), true);
             t.deepEquals((new Point(0, 1).rotate(Math.PI/2)).round(), new Point(-1, 0));
