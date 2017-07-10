@@ -352,7 +352,7 @@ var point = new Point(0, 1);
 Requires [nodejs](http://nodejs.org/).
 
 ```sh
-$ npm install point-geometry
+$ npm install @mapbox/point-geometry
 ```
 
 ## Tests
