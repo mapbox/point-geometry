@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/mapbox/point-geometry",
   "devDependencies": {
-    "coveralls": "~2.10.1",
+    "coveralls": "~3.0.0",
     "dox": "^0.6.1",
     "doxme": "^1.8.2",
     "istanbul": "~0.2.11",
