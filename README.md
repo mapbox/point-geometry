@@ -5,7 +5,7 @@
 a point geometry with transforms
 
 
-### `Point(x, y)`
+### `Point(x, y, z?)`
 
 A standalone point geometry with useful accessor, comparison, and
 modification methods.
@@ -17,6 +17,7 @@ modification methods.
 | --------- | ------ | -------------------------------------------------------------------------------------- |
 | `x`       | Number | the x-coordinate. this could be longitude or screen pixels, or any other sort of unit. |
 | `y`       | Number | the y-coordinate. this could be latitude or screen pixels, or any other sort of unit.  |
+| `z`       | [Number] | the z-coordinate. optional. this could be any unit  |
 
 
 ### Example

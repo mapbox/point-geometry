@@ -14,9 +14,10 @@ module.exports = Point;
  * @example
  * var point = new Point(-77, 38);
  */
-function Point(x, y) {
+function Point(x, y, z) {
     this.x = x;
     this.y = y;
+    this.z = z || 0;
 }
 
 Point.prototype = {
@@ -26,7 +27,7 @@ Point.prototype = {
      * without affecting the old one.
      * @return {Point} the clone
      */
-    clone: function() { return new Point(this.x, this.y); },
+    clone: function() { return new Point(this.x, this.y, this.z); },
 
     /**
      * Add this point's x & y coordinates to another point,
@@ -131,7 +132,7 @@ Point.prototype = {
      * @return {Number} magnitude
      */
     mag: function() {
-        return Math.sqrt(this.x * this.x + this.y * this.y);
+        return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
     },
 
     /**
@@ -142,7 +143,8 @@ Point.prototype = {
      */
     equals: function(other) {
         return this.x === other.x &&
-               this.y === other.y;
+               this.y === other.y &&
+               this.z === other.z;
     },
 
     /**
@@ -163,8 +165,9 @@ Point.prototype = {
      */
     distSqr: function(p) {
         var dx = p.x - this.x,
-            dy = p.y - this.y;
-        return dx * dx + dy * dy;
+            dy = p.y - this.y,
+            dz = p.z - this.z;
+        return dx * dx + dy * dy + dz * dz;
     },
 
     /**
@@ -306,7 +309,7 @@ Point.convert = function (a) {
         return a;
     }
     if (Array.isArray(a)) {
-        return new Point(a[0], a[1]);
+        return new Point(a[0], a[1], a[2]);
     }
     return a;
 };
