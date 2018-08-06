@@ -325,14 +325,14 @@ the cross product a x b = |a||b|sin(θ) for θ.
 
 ### `convert(a)`
 
-Construct a point from an array if necessary, otherwise if the input
+Construct a point from an array or point-like object if necessary, otherwise if the input
 is already a Point, or an unknown type, return it unchanged
 
 ### Parameters
 
-| parameter | type                     | description             |
-| --------- | ------------------------ | ----------------------- |
-| `a`       | Array\.\<Number\>\,Point | any kind of input value |
+| parameter | type                             | description             |
+| --------- | -------------------------------- | ----------------------- |
+| `a`       | Array\.\<Number\>\,Object\,Point | any kind of input value |
 
 
 ### Example
@@ -340,7 +340,9 @@ is already a Point, or an unknown type, return it unchanged
 ```js
 // this
 var point = Point.convert([0, 1]);
-// is equivalent to
+// and this
+var point = Point.convert({x: 0, y: 1});
+// are equivalent to
 var point = new Point(0, 1);
 ```
 

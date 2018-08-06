@@ -291,14 +291,16 @@ Point.prototype = {
 };
 
 /**
- * Construct a point from an array if necessary, otherwise if the input
+ * Construct a point from an array or point-like object if necessary, otherwise if the input
  * is already a Point, or an unknown type, return it unchanged
- * @param {Array<Number>|Point|*} a any kind of input value
+ * @param {Array<Number>|Object|Point|*} a any kind of input value
  * @return {Point} constructed point, or passed-through value.
  * @example
  * // this
  * var point = Point.convert([0, 1]);
- * // is equivalent to
+ * // and this
+ * var point = Point.convert({x: 0, y: 1});
+ * // are equivalent to
  * var point = new Point(0, 1);
  */
 Point.convert = function (a) {
@@ -307,6 +309,9 @@ Point.convert = function (a) {
     }
     if (Array.isArray(a)) {
         return new Point(a[0], a[1]);
+    }
+    if (a && a.hasOwnProperty('x') && a.hasOwnProperty('y')) {
+        return new Point(a.x, a.y);
     }
     return a;
 };

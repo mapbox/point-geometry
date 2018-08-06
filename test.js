@@ -7,6 +7,7 @@ test('Point', function(t) {
     t.test('.convert', function(t) {
         t.equal(Point.convert(new Point(20, 30)).equals(new Point(20, 30)), true);
         t.equal(Point.convert([20, 30]).equals(new Point(20, 30)), true);
+        t.equal(Point.convert({ x: 20, y: 30 }).equals(new Point(20, 30)), true);
         t.equal(Point.convert('somestring'), 'somestring');
         t.end();
     });
