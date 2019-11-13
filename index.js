@@ -125,7 +125,7 @@ Point.prototype = {
     round:   function() { return this.clone()._round(); },
 
     /**
-     * Return the magitude of this point: this is the Euclidean
+     * Return the magnitude of this point: this is the Euclidean
      * distance from the 0, 0 coordinate to this point's x and y
      * coordinates.
      * @return {Number} magnitude
