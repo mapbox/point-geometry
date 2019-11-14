@@ -1,6 +1,6 @@
 'use strict';
-var test = require('tape').test;
 
+var test = require('tape').test;
 var Point = require('./');
 
 test('Point', function (t) {

@@ -63,7 +63,7 @@ Point.prototype = {
     /**
      * Multiply this point's x & y coordinates by a factor,
      * yielding a new point.
-     * @param {Point} k factor
+     * @param {Number} k factor
      * @return {Point} output point
      */
     mult: function (k) { return this.clone()._mult(k); },
