@@ -34,8 +34,5 @@
   },
   "files": [
     "index.js"
-  ],
-  "dependencies": {
-    "nyc": "^14.1.1"
-  }
+  ]
 }
