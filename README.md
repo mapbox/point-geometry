@@ -92,7 +92,7 @@ yielding a new point.
 
 ##### Parameters
 
--   `k` **[Point](#point)** factor
+-   `k` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** factor
 
 Returns **[Point](#point)** output point
 
@@ -234,19 +234,21 @@ Returns **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 #### convert
 
-Construct a point from an array if necessary, otherwise if the input
+Construct a point from an array or point-like object if necessary, otherwise if the input
 is already a Point, or an unknown type, return it unchanged
 
 ##### Parameters
 
--   `a` **([Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)> | [Point](#point))** any kind of input value
+-   `a` **([Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)> | [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object) \| [Point](#point))** any kind of input value
 
 ##### Examples
 
 ```javascript
 // this
 var point = Point.convert([0, 1]);
-// is equivalent to
+// and this
+var point = Point.convert({x: 0, y: 1});
+// are equivalent to
 var point = new Point(0, 1);
 ```
 
