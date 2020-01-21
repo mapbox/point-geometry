@@ -310,7 +310,11 @@ Point.convert = function (a) {
     if (Array.isArray(a)) {
         return new Point(a[0], a[1]);
     }
-    if (a && a.hasOwnProperty('x') && a.hasOwnProperty('y')) {
+    if (
+        a &&
+        Object.prototype.hasOwnProperty.call(a, 'x') &&
+        Object.prototype.hasOwnProperty.call(a, 'y')
+    ) {
         return new Point(a.x, a.y);
     }
     return a;
