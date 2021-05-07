@@ -4,7 +4,16 @@
 
 a point geometry with transforms
 
-## Installation
+## Use on the browser or Deno
+
+```javascript
+import { Point } from "https://taisukef.github.io/point-geometry/Point.js";
+
+const p = new Point(-77, 38);
+console.log(p);
+```
+
+## Installation for Node.js
 
 Requires [nodejs](http://nodejs.org/).
 
