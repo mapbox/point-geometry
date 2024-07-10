@@ -1,7 +1,5 @@
 # @mapbox/point-geometry
 
-[![build status](https://secure.travis-ci.org/mapbox/point-geometry.png)](http://travis-ci.org/mapbox/point-geometry)
-
 a point geometry with transforms
 
 ## Installation
