@@ -1,10 +1,8 @@
 # @mapbox/point-geometry
 
-a point geometry with transforms
+A `Point` class for representing point geometry with useful utility methods.
 
 ## Installation
-
-Requires [nodejs](http://nodejs.org/).
 
 ```sh
 $ npm install @mapbox/point-geometry
