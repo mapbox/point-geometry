@@ -19,15 +19,13 @@ modification methods.
 
 #### Parameters
 
--   `x` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** the x-coordinate. this could be longitude or screen
-    pixels, or any other sort of unit.
--   `y` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** the y-coordinate. this could be latitude or screen
-    pixels, or any other sort of unit.
+*   `x` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** the x-coordinate. This could be longitude or screen pixels, or any other sort of unit.
+*   `y` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** the y-coordinate. This could be latitude or screen pixels, or any other sort of unit.
 
 #### Examples
 
 ```javascript
-var point = new Point(-77, 38);
+const point = new Point(-77, 38);
 ```
 
 #### clone
@@ -44,7 +42,7 @@ yielding a new point.
 
 ##### Parameters
 
--   `p` **[Point](#point)** the other point
+*   `p` **[Point](#point)** the other point
 
 Returns **[Point](#point)** output point
 
@@ -55,7 +53,7 @@ yielding a new point.
 
 ##### Parameters
 
--   `p` **[Point](#point)** the other point
+*   `p` **[Point](#point)** the other point
 
 Returns **[Point](#point)** output point
 
@@ -66,7 +64,7 @@ yielding a new point.
 
 ##### Parameters
 
--   `p` **[Point](#point)** the other point
+*   `p` **[Point](#point)** the other point
 
 Returns **[Point](#point)** output point
 
@@ -77,7 +75,7 @@ yielding a new point.
 
 ##### Parameters
 
--   `p` **[Point](#point)** the other point
+*   `p` **[Point](#point)** the other point
 
 Returns **[Point](#point)** output point
 
@@ -88,7 +86,7 @@ yielding a new point.
 
 ##### Parameters
 
--   `k` **[Point](#point)** factor
+*   `k` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** factor
 
 Returns **[Point](#point)** output point
 
@@ -99,7 +97,7 @@ yielding a new point.
 
 ##### Parameters
 
--   `k` **[Point](#point)** factor
+*   `k` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** factor
 
 Returns **[Point](#point)** output point
 
@@ -110,7 +108,7 @@ given in radians
 
 ##### Parameters
 
--   `a` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** angle to rotate around, in radians
+*   `a` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** angle to rotate around, in radians
 
 Returns **[Point](#point)** output point
 
@@ -121,8 +119,8 @@ given in radians
 
 ##### Parameters
 
--   `a` **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** angle to rotate around, in radians
--   `p` **[Point](#point)** Point to rotate around
+*   `a` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** angle to rotate around, in radians
+*   `p` **[Point](#point)** Point to rotate around
 
 Returns **[Point](#point)** output point
 
@@ -132,7 +130,7 @@ Multiply this point by a 4x1 transformation matrix
 
 ##### Parameters
 
--   `m` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)>** transformation matrix
+*   `m` **\[[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)]** transformation matrix
 
 Returns **[Point](#point)** output point
 
@@ -166,7 +164,7 @@ Return the magnitude of this point: this is the Euclidean
 distance from the 0, 0 coordinate to this point's x and y
 coordinates.
 
-Returns **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** magnitude
+Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** magnitude
 
 #### equals
 
@@ -175,7 +173,7 @@ true or false.
 
 ##### Parameters
 
--   `other` **[Point](#point)** the other point
+*   `other` **[Point](#point)** the other point
 
 Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** whether the points are equal
 
@@ -185,9 +183,9 @@ Calculate the distance from this point to another point
 
 ##### Parameters
 
--   `p` **[Point](#point)** the other point
+*   `p` **[Point](#point)** the other point
 
-Returns **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** distance
+Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** distance
 
 #### distSqr
 
@@ -197,16 +195,16 @@ relative distances.
 
 ##### Parameters
 
--   `p` **[Point](#point)** the other point
+*   `p` **[Point](#point)** the other point
 
-Returns **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** distance
+Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** distance
 
 #### angle
 
 Get the angle from the 0, 0 coordinate to this point, in radians
 coordinates.
 
-Returns **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** angle
+Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** angle
 
 #### angleTo
 
@@ -214,9 +212,9 @@ Get the angle from this point to another point, in radians
 
 ##### Parameters
 
--   `b` **[Point](#point)** the other point
+*   `b` **[Point](#point)** the other point
 
-Returns **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** angle
+Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** angle
 
 #### angleWith
 
@@ -224,9 +222,21 @@ Get the angle between this point and another point, in radians
 
 ##### Parameters
 
--   `b` **[Point](#point)** the other point
+*   `b` **[Point](#point)** the other point
 
-Returns **[Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** angle
+Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** angle
+
+#### angleWithSep
+
+Find the angle of the two vectors, solving the formula for
+the cross product a x b = |a||b|sin(θ) for θ.
+
+##### Parameters
+
+*   `x` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** the x-coordinate
+*   `y` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** the y-coordinate
+
+Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** the angle in radians
 
 #### convert
 
@@ -235,7 +245,7 @@ is already a Point, or an unknown type, return it unchanged
 
 ##### Parameters
 
--   `a` **([Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)> | [Point](#point))** any kind of input value
+*   `a` **(\[[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)] | [Point](#point))** any kind of input value
 
 ##### Examples
 
