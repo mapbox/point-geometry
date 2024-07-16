@@ -6,7 +6,8 @@ import Point from './index.js';
 test('.convert', () => {
     assert.equal(Point.convert(new Point(20, 30)).equals(new Point(20, 30)), true);
     assert.equal(Point.convert([20, 30]).equals(new Point(20, 30)), true);
-    assert.equal(Point.convert('somestring'), 'somestring');
+    assert.equal(Point.convert({x: 20, y: 30}).equals(new Point(20, 30)), true);
+    assert.throws(() => Point.convert('somestring'));
 });
 test('#mag', () => {
     assert.equal(new Point(0, 2).mag(), 2);
